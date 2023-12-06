@@ -1,0 +1,19 @@
+<h1>画像投稿フォーム</h1>
+<%= form_with model: @post_image do |f| %>
+
+  <h4>画像
+  <br>
+  <%= f.file_field :image, accept: "image/*" %>
+  </h4>
+  
+  <h4>ショップ名
+  <br>
+  <%= f.text_field :shop_name %>
+  </h4>
+
+  <h4>説明
+  <br>
+  <%= f.text_area :caption %>
+  </h4>
+  <%= f.submit '投稿' %>
+<% end %>
